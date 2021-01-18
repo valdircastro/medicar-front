@@ -37,6 +37,7 @@ body, html{
     border-radius: 4px;
     border: 1px solid #a8a8a8;
     padding-left: 8px;
+    font-family: roboto-medium;
 }
 
 .input-margin-input{
@@ -55,6 +56,7 @@ body, html{
     label{
         color: #a8a8a8;
         height: 100%;
+        margin-left: 8px;
     }
     input{
         width: 20px;
@@ -63,6 +65,45 @@ body, html{
         margin-left: 0;
     }
 }
+
+// Hack para estilizar checkbox
+.label-checkbox-wrapper{
+    margin: 0 !important;
+    input{
+        display: none;
+        &:checked{
+            & + span{
+                background-color: #49b4bb;
+            }
+        }
+    }
+    span{
+        width: 20px;
+        height: 20px;
+        display: block;
+        background-color: #fff;
+        border-radius: 4px;
+        border: 1px solid #a8a8a8;
+    }
+}
+
+
+// .chk input {
+//     display: none;
+// }
+
+// .chk span {
+//     width: 20px;
+//     height: 20px;
+//     display: block;
+//     background-color: #fff;
+//     border-radius: 4px;
+//     border: 1px solid #a8a8a8;
+// }
+
+// .chk input:checked + span {
+//     background-color: #49b4bb;
+// }
 
 .form-button-row{
     display: flex;
