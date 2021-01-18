@@ -1,0 +1,17 @@
+<div class="login-container">
+        <form [formGroup]="loginForm" (ngSubmit)="sendForm()" class="form-box">
+            <img src="./../../../assets/images/login_logo.png" alt="">
+            <input type="text" formControlName="user" placeholder="Usuário" class="form-input input-margin-input">
+            <input type="password" formControlName="password" placeholder="Senha" class="form-input input-margin-checkbox">
+            
+            <div class="checkbox-row">
+                <input type="checkbox" id="save-password" class>
+                <label for="save-password"> Lembrar minha senha </label>
+            </div>
+            
+            <div class="form-button-row">
+                <button class="form-button form-button-white">Criar Conta</button>
+                <button type="submit" class="form-button">Login</button>
+            </div>
+        </form> 
+</div>
