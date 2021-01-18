@@ -1,0 +1,53 @@
+<div class="page-container">
+    <div class="center-horizontal">
+        <div class="header">
+            <img src="./../../../assets/images/consulta_logo.png">
+            <div class="header-span">
+                <span class="username">Lucas freitas</span>
+                <a [routerLink]="['/']">
+                    <div class="signout-btn">Desconectar</div>
+                </a>
+                <!-- <div class="signout-btn">Desconectar</div> -->
+            </div>
+        </div>
+        <mat-card class="table-container">
+            <div class="table-header-above">
+                <div class="table-title text-18">
+                    Consulta Clínica
+                </div>
+                <a [routerLink]="['/new-consulation']">
+                    <button mat-flat-button color="primary">
+                        <mat-icon>add</mat-icon>
+                        Nova Consulta
+                    </button>
+                </a>
+                <!-- <button mat-flat-button color="primary">
+                    <mat-icon>add</mat-icon>
+                    Nova Consulta
+                </button> -->
+            </div>
+            <table>
+                <tr>
+                    <th>ESPECIALIDADE</th>
+                    <th>PROFISSIONAL</th>
+                    <th>DATA</th>
+                    <th>HORA</th>
+                    <th></th>
+                </tr>
+                <tr *ngFor="let consulation of consulations">
+                    <td>{{ consulation.specialty }}</td>
+                    <td>{{ consulation.name }}</td>
+                    <td>{{ consulation.date }}</td>
+                    <td>{{ consulation.hour }}</td>
+                    <td class="signout-btn td-button-container">
+                        <mat-icon class="td-button">close</mat-icon>
+                        <span class="td-button">Desmarcar</span>
+                    </td>
+                </tr>
+            </table>
+        </mat-card>
+        <div class="footer">
+            <!-- So pra fazer espaço -->
+        </div>
+    </div>
+</div>

@@ -1,21 +1,32 @@
-<div class="login-container">
-        <form [formGroup]="loginForm" (ngSubmit)="sendForm()" class="form-box">
-            <img src="./../../../assets/images/login_logo.png" alt="">
-            <input type="text" formControlName="user" placeholder="Usuário" class="form-input input-margin-input">
-            <input type="password" formControlName="password" placeholder="Senha" class="form-input input-margin-checkbox">
-            
-            <div class="checkbox-row">
-                <!-- <input type="checkbox" id="save-password" class> -->
-                <label class="label-checkbox-wrapper">
-                    <input type="checkbox" name="exemplo" />
-                    <span></span>
-                </label>
-                <label for="save-password"> Lembrar minha senha </label>
-            </div>
-            
-            <div class="form-button-row">
-                <button class="form-button form-button-white">Criar Conta</button>
-                <button type="submit" class="form-button">Login</button>
-            </div>
-        </form> 
+<div class="form-container">
+    <form [formGroup]="loginForm" (ngSubmit)="sendForm()" class="form-box">
+        <img src="./../../../assets/images/login_logo.png" alt="">
+
+        <mat-form-field appearance="outline">
+            <mat-label>Usuário</mat-label>
+            <input matInput placeholder="Placeholder">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Senha</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+
+        <mat-checkbox class="checkbox-row" color="primary">Lembrar minha senha</mat-checkbox>
+
+        <div class="form-button-row">
+            <a [routerLink]="['/registration']">
+                <button mat-flat-button class="form-button">Criar Conta</button>
+            </a>
+            <!-- <button mat-flat-button class="form-button">Criar Conta</button> -->
+            <a [routerLink]="['/consulations']">
+                <button mat-flat-button color="primary" class="form-button">Acessar</button>
+            </a>
+            <!-- <button mat-flat-button color="primary" class="form-button">Acessar</button> -->
+        </div>
+    </form>
 </div>

@@ -1,0 +1,64 @@
+<div class="form-container">
+    <form (ngSubmit)="sendForm()" class="form-box">
+        <img src="./../../../assets/images/login_logo.png" alt="">
+
+        <!-- Código antigo go horse -->
+        <!-- <mat-form-field appearance="outline">
+            <mat-label>Especialidade</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let specialty of specialties" [value]="specialty.value">
+                    {{ specialty.viewValue }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Medico</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let doctor of doctors" [value]="doctor.value">
+                    {{ doctor.viewValue }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        
+        <mat-form-field appearance="outline">
+            <mat-label>Data</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let data of dates" [value]="data.value">
+                    {{ data.viewValue }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Hora</mat-label>
+            <mat-select>
+                <mat-option *ngFor="let hour of hours" [value]="hour.value">
+                    {{ hour.viewValue }}
+                </mat-option>
+            </mat-select>
+        </mat-form-field> -->
+
+        <div class="field-container" *ngFor="let field of fields">
+            <mat-form-field appearance="outline">
+                <mat-label> {{ field.name }} </mat-label>
+                <mat-select>
+                    <mat-option *ngFor="let item of field.data" [value]="item.value">
+                        {{ item.viewValue }}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div class="form-button-row">
+            <a [routerLink]="['/consulations']">
+                <button mat-flat-button class="form-button">Cancelar</button>
+            </a>
+            <a [routerLink]="['/consulations']">
+                <button mat-flat-button color="primary" class="form-button">Confirmar</button>
+            </a>
+            <!-- <button mat-flat-button class="form-button">Cancelar</button>
+            <button mat-flat-button color="primary" class="form-button">Confirmar</button> -->
+        </div>
+    </form>
+</div>

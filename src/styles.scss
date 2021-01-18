@@ -8,11 +8,11 @@ body, html{
     margin: 0;
     height: 100%;
     width: 100%;
-    font-family: roboto-medium;
+    font-family: roboto-medium !important;
     font-size: 13px;
 }
 
-.login-container{
+.form-container{
     display: flex;
     height: 100%;
     width: 100%;
@@ -31,79 +31,9 @@ body, html{
     }
 }
 
-.form-input{
-    height: 40px;
-    box-sizing: border-box;
-    border-radius: 4px;
-    border: 1px solid #a8a8a8;
-    padding-left: 8px;
-    font-family: roboto-medium;
-}
-
-.input-margin-input{
-    margin-bottom: 20px;
-}
-
-.input-margin-checkbox{
-    margin-bottom: 11px;
-}
-
 .checkbox-row{
     margin-bottom: 39px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    label{
-        color: #a8a8a8;
-        height: 100%;
-        margin-left: 8px;
-    }
-    input{
-        width: 20px;
-        height: 20px;
-        box-sizing: border-box;
-        margin-left: 0;
-    }
 }
-
-// Hack para estilizar checkbox
-.label-checkbox-wrapper{
-    margin: 0 !important;
-    input{
-        display: none;
-        &:checked{
-            & + span{
-                background-color: #49b4bb;
-            }
-        }
-    }
-    span{
-        width: 20px;
-        height: 20px;
-        display: block;
-        background-color: #fff;
-        border-radius: 4px;
-        border: 1px solid #a8a8a8;
-    }
-}
-
-
-// .chk input {
-//     display: none;
-// }
-
-// .chk span {
-//     width: 20px;
-//     height: 20px;
-//     display: block;
-//     background-color: #fff;
-//     border-radius: 4px;
-//     border: 1px solid #a8a8a8;
-// }
-
-// .chk input:checked + span {
-//     background-color: #49b4bb;
-// }
 
 .form-button-row{
     display: flex;
@@ -114,14 +44,7 @@ body, html{
 .form-button{
     width: 180px;
     height: 40px; 
-    font-size: 18px;
-    border-radius: 8px;
-    border-width: 0;
     color: white;
-    background-color: #49b4bb;
-    &:hover{
-        background-color: #90D3D7;
-    }
 }
 
 .form-button-white{
@@ -130,4 +53,12 @@ body, html{
     &:hover{
         background-color: #D9F1F3;
     }
+}
+
+.text-18{
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
 }
