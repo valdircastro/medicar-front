@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Specialties, Doctors, Dates, Hours } from "./../../../ts/new-consulations";
+import { DataService } from "./../../../services/data.service";
+import { Router } from '@angular/router';
 
 interface Food {
   value: string;
@@ -22,7 +24,7 @@ export class NewConsulationPageComponent implements OnInit {
 
   fields = []
 
-  constructor() { }
+  constructor(private dataService: DataService, private router: Router) { }
 
   ngOnInit(): void {
     this.specialties = Specialties;
@@ -39,7 +41,11 @@ export class NewConsulationPageComponent implements OnInit {
   }
 
   sendForm(){
-
+    console.log("Nova consulta criada");
+    this.dataService.createConsulation('Pediatria', 'José da Silva', '01/02/2021', '08:00');
+    console.log('consulations:');
+    console.log(this.dataService.consulations);
+    this.router.navigateByUrl('/consulations');
   }
 
 }

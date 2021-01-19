@@ -32,14 +32,14 @@
                     <th>PROFISSIONAL</th>
                     <th>DATA</th>
                     <th>HORA</th>
-                    <th></th>
+                    <th style="width: 164px;"></th>
                 </tr>
-                <tr *ngFor="let consulation of consulations">
+                <tr *ngFor="let consulation of consulations, let i = index">
                     <td>{{ consulation.specialty }}</td>
                     <td>{{ consulation.name }}</td>
                     <td>{{ consulation.date }}</td>
                     <td>{{ consulation.hour }}</td>
-                    <td class="signout-btn td-button-container">
+                    <td class="signout-btn td-button-container" (click)="deleteConsulation(i)">
                         <mat-icon class="td-button">close</mat-icon>
                         <span class="td-button">Desmarcar</span>
                     </td>
