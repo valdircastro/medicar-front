@@ -1,27 +1,25 @@
 # MedicarFront
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7.
+## Como rodar
 
-## Development server
+1. Instalar NodeJS (https://nodejs.org/en/)
+2. Instalar Angular CLI `npm install -g @angular/cli`
+3. Com o terminal aberto no diretório do projeto, instalar as dependencias com `npm install`
+4. Rodar o projeto com `ng serve -o`
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Sobre o projeto
 
-## Code scaffolding
+Aplicativo de marcação de consultas Medicar desenvolvido com [Angular CLI](https://github.com/angular/angular-cli) version 11.0.7 para Desafio Intmed.  
+UI foi montada usando Angular Material.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Telas
+1. Login  
+![Screenshot](screenshots/login.png)
+2. Cadastrar
+![Screenshot](screenshots/sign_up.png)  
+  
+  
+4. Listagem de consultas
+![Screenshot](screenshots/consulation_list.png)
+5. Marcar nova consulta
+![Screenshot](screenshots/new_consulation.png)
